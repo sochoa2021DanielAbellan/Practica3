@@ -4,4 +4,10 @@
     <string name="tvAgenda">José Martinez - 123456789</string>
     <string name="btnNuevo">Nuevo</string>
     <string name="btnSalir">Salir</string>
+    <string name="tvNuevoContacto">Nuevo Contacto</string>
+    <string name="tvNombre">Nombre</string>
+    <string name="tvApellidos">Apellidos</string>
+    <string name="tvNombreEmpresa">Nombre de Empresa</string>
+    <string name="btnOk">OK</string>
+    <string name="btnCancelar">Cancelar</string>
 </resources>
