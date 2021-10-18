@@ -10,4 +10,12 @@
     <string name="tvNombreEmpresa">Nombre de Empresa</string>
     <string name="btnOk">OK</string>
     <string name="btnCancelar">Cancelar</string>
+    <string name="tvTelefono">Teléfono</string>>
+    <string name="rbParticular">Particular</string>
+    <string name="rbEmpresa">Empresa</string>
+    <string name="swFavorito">¿Favorito? </string>
+    <string name="rbMujer">Mujer</string>
+    <string name="rbHombre">Hombre</string>
+    <string name="chkRecordarLlamar">Recordar llamar</string>
+    <string name="tvNumeroEdad">Edad: 30</string>
 </resources>

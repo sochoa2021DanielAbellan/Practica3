@@ -10,9 +10,9 @@
         android:id="@+id/tvNuevoContacto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
         android:text="@string/tvNuevoContacto"
         android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -67,6 +67,125 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintGuide_percent="0.3"
         app:layout_constraintTop_toBottomOf="@+id/tvNombreEmpresa" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/swFavorito"
+        app:layout_constraintGuide_percent="0.45"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTelefono"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:text="@string/tvTelefono"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline2" />
+
+    <RadioGroup
+        android:id="@+id/rgTipoTelefono"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTelefono">
+
+        <RadioButton
+            android:id="@+id/rbParticular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rbParticular" />
+
+        <RadioButton
+            android:id="@+id/rbEmpresa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rbEmpresa" />
+    </RadioGroup>
+
+    <Switch
+        android:id="@+id/swFavorito"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/swFavorito"
+        app:layout_constraintBottom_toTopOf="@+id/ckbRecordarLlamar"
+        app:layout_constraintEnd_toStartOf="@+id/rgSexo"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guideline3" />
+
+    <RadioGroup
+        android:id="@+id/rgSexo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/swFavorito"
+        app:layout_constraintTop_toTopOf="@+id/swFavorito">
+
+        <RadioButton
+            android:id="@+id/rbMujer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/rbMujer" />
+
+        <RadioButton
+            android:id="@+id/rbHombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/rbHombre" />
+    </RadioGroup>
+
+    <CheckBox
+        android:id="@+id/ckbRecordarLlamar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/chkRecordarLlamar"
+        app:layout_constraintBottom_toTopOf="@+id/guideline4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/swFavorito" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintGuide_percent="0.65"
+        app:layout_constraintTop_toBottomOf="@+id/ckbRecordarLlamar" />
+
+    <TextView
+        android:id="@+id/tvNumeroEdad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/tvNumeroEdad"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline4" />
+
+    <SeekBar
+        android:id="@+id/skbNumeroEdad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:max="100"
+        android:progress="30"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvNumeroEdad" />
 
     <Button
         android:id="@+id/btnOk"
