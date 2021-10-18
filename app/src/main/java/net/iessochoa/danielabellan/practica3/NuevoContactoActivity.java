@@ -20,6 +20,8 @@ public class NuevoContactoActivity extends AppCompatActivity {
     private Button btnOk;
     private Button btnCancelar;
 
+    //TODO: AÑADIR LO DE LOS ICONOS, QUE AUN NO LOS HE PUESTO
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
