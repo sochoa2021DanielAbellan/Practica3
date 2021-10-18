@@ -9,6 +9,10 @@ import org.w3c.dom.Text;
 
 public class NuevoContactoActivity extends AppCompatActivity {
 
+    public final static int OPTION_REQUEST_NOMBRE = 0;
+    public final static int OPTION_REQUEST_APELLIDOS = 1;
+    public final static int OPTION_REQUEST_NOMBRE_EMPRESA = 2;
+
     private TextView tvNombre;
     private TextView tvApellidos;
     private TextView tvNombreEmpresa;
