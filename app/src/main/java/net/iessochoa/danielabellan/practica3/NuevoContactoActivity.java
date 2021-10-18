@@ -1,5 +1,6 @@
 package net.iessochoa.danielabellan.practica3;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
@@ -29,6 +30,21 @@ public class NuevoContactoActivity extends AppCompatActivity {
         tvNombreEmpresa = findViewById(R.id.tvNombreEmpresa);
         btnOk = findViewById(R.id.btnOk);
         btnCancelar = findViewById(R.id.btnCancelar);
+
+        tvNombre.setOnClickListener(view -> {
+            Intent intent = new Intent(this, IntroducirDatosActivity.class);
+            startActivity(intent);
+        });
+
+        tvApellidos.setOnClickListener(view -> {
+            Intent intent = new Intent(this, IntroducirDatosActivity.class);
+            startActivity(intent);
+        });
+
+        tvNombreEmpresa.setOnClickListener(view -> {
+            Intent intent = new Intent(this, IntroducirDatosActivity.class);
+            startActivity(intent);
+        });
 
         btnCancelar.setOnClickListener(view -> {
             this.finish();
