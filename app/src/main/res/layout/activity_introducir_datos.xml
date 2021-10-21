@@ -6,4 +6,37 @@
     android:layout_height="match_parent"
     tools:context=".IntroducirDatosActivity">
 
+    <EditText
+        android:id="@+id/etDato"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:ems="10"
+        android:hint="@string/etDato"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnOkDatos"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/btnOk"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnCancelarDatos"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnCancelarDatos"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/btnCancelar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnOkDatos"
+        app:layout_constraintTop_toTopOf="@+id/btnOkDatos" />
 </android.support.constraint.ConstraintLayout>

@@ -18,4 +18,5 @@
     <string name="rbHombre">Hombre</string>
     <string name="chkRecordarLlamar">Recordar llamar</string>
     <string name="tvNumeroEdad">Edad: 30</string>
+    <string name="etDato">Introduzca el dato correspondiente</string>
 </resources>
