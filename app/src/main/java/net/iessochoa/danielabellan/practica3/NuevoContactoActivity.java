@@ -3,12 +3,11 @@ package net.iessochoa.danielabellan.practica3;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
-public class NuevoContactoActivity extends AppCompatActivity {
+public class NuevoContactoActivity extends AppCompatActivity implements View.OnClickListener {
 
     public final static int OPTION_REQUEST_NOMBRE = 0;
     public final static int OPTION_REQUEST_APELLIDOS = 1;
@@ -31,23 +30,52 @@ public class NuevoContactoActivity extends AppCompatActivity {
         btnOk = findViewById(R.id.btnOk);
         btnCancelar = findViewById(R.id.btnCancelar);
 
-        tvNombre.setOnClickListener(view -> {
-            Intent intent = new Intent(this, IntroducirDatosActivity.class);
-            startActivity(intent);
-        });
+        tvNombre.setOnClickListener(this);
+        tvApellidos.setOnClickListener(this);
+        tvNombreEmpresa.setOnClickListener(this);
+        btnCancelar.setOnClickListener(this);
+    }
 
-        tvApellidos.setOnClickListener(view -> {
-            Intent intent = new Intent(this, IntroducirDatosActivity.class);
-            startActivity(intent);
-        });
+    @Override
+    public void onClick(View view){
+        Intent intent = new Intent(this, IntroducirDatosActivity.class);
 
-        tvNombreEmpresa.setOnClickListener(view -> {
-            Intent intent = new Intent(this, IntroducirDatosActivity.class);
-            startActivity(intent);
-        });
+        switch(view.getId()){
+            case R.id.tvNombre:
+                intent.putExtra(IntroducirDatosActivity.EXTRA_DATO, tvNombre.getText().toString());
+                startActivityForResult(intent, OPTION_REQUEST_NOMBRE);
+                break;
+            case R.id.tvApellidos:
+                intent.putExtra(IntroducirDatosActivity.EXTRA_DATO, tvApellidos.getText().toString());
+                startActivityForResult(intent, OPTION_REQUEST_APELLIDOS);
+                break;
+            case R.id.tvNombreEmpresa:
+                intent.putExtra(IntroducirDatosActivity.EXTRA_DATO, tvNombreEmpresa.getText().toString());
+                startActivityForResult(intent, OPTION_REQUEST_NOMBRE_EMPRESA);
+                break;
+            case R.id.btnCancelar:
+                this.finish();
+        }
 
-        btnCancelar.setOnClickListener(view -> {
-            this.finish();
-        });
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent intent) {
+        super.onActivityResult(requestCode, resultCode, intent);
+
+        if(resultCode != RESULT_CANCELED){
+            String datoResultado = intent.getStringExtra(IntroducirDatosActivity.EXTRA_DATO_RESULTADO);
+            switch(requestCode){
+                case OPTION_REQUEST_NOMBRE:
+                    tvNombre.setText(datoResultado);
+                    break;
+                case OPTION_REQUEST_APELLIDOS:
+                    tvApellidos.setText(datoResultado);
+                    break;
+                case OPTION_REQUEST_NOMBRE_EMPRESA:
+                    tvNombreEmpresa.setText(datoResultado);
+                    break;
+            }
+        }
     }
 }
