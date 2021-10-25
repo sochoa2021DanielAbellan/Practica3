@@ -86,6 +86,7 @@
         android:layout_width="31dp"
         android:layout_height="34dp"
         android:layout_marginStart="20dp"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@+id/ivFavoritos"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/ivFavoritos"
@@ -96,7 +97,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="20dp"
-        android:visibility="visible"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/tvApellidos"
         app:srcCompat="@android:drawable/btn_star_big_on" />
@@ -147,6 +148,7 @@
             android:id="@+id/rbParticular"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:checked="true"
             android:text="@string/rbParticular" />
 
         <RadioButton
@@ -160,6 +162,7 @@
         android:id="@+id/swFavorito"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:checked="false"
         android:text="@string/swFavorito"
         app:layout_constraintBottom_toTopOf="@+id/ckbRecordarLlamar"
         app:layout_constraintEnd_toStartOf="@+id/rgSexo"
@@ -181,6 +184,7 @@
             android:id="@+id/rbMujer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:checked="true"
             android:text="@string/rbMujer" />
 
         <RadioButton
