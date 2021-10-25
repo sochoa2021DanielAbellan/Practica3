@@ -23,7 +23,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@+id/tvNombre"
-        app:layout_constraintGuide_percent="0.1"
+        app:layout_constraintGuide_percent="0.10462287"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -32,11 +32,11 @@
         android:layout_height="wrap_content"
         android:hint="@string/tvNombre"
         android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/tvApellidos"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/tvNombreEmpresa"
+        app:layout_constraintEnd_toStartOf="@+id/btnOk"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/guideline" />
+        app:layout_constraintTop_toBottomOf="@+id/tvApellidos" />
 
     <TextView
         android:id="@+id/tvApellidos"
@@ -44,11 +44,11 @@
         android:layout_height="wrap_content"
         android:hint="@string/tvApellidos"
         android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/tvNombreEmpresa"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/tvNombre"
+        app:layout_constraintEnd_toStartOf="@+id/guideline5"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvNombre" />
+        app:layout_constraintTop_toBottomOf="@+id/tvNuevoContacto" />
 
     <TextView
         android:id="@+id/tvNombreEmpresa"
@@ -56,60 +56,54 @@
         android:layout_height="wrap_content"
         android:hint="@string/tvNombreEmpresa"
         android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/guideline2"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toStartOf="@+id/guideline5"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvApellidos" />
+        app:layout_constraintTop_toBottomOf="@+id/tvNombre" />
 
     <ImageView
         android:id="@+id/ivTipoTelefono"
         android:layout_width="35dp"
         android:layout_height="35dp"
-        android:layout_marginStart="70dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvNombre"
+        android:layout_marginStart="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivRecordarLlamar"
+        app:layout_constraintStart_toEndOf="@+id/ivRecordarLlamar"
+        app:layout_constraintTop_toTopOf="@+id/ivRecordarLlamar"
         app:srcCompat="@drawable/ic_particular" />
 
     <ImageView
         android:id="@+id/ivSexo"
         android:layout_width="35dp"
         android:layout_height="35dp"
-        android:layout_marginEnd="70dp"
+        android:layout_marginStart="15dp"
         app:layout_constraintBottom_toBottomOf="@+id/ivTipoTelefono"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivTipoTelefono"
         app:layout_constraintTop_toTopOf="@+id/ivTipoTelefono"
+        app:layout_constraintVertical_bias="0.625"
         app:srcCompat="@drawable/ic_mujer" />
 
     <ImageView
         android:id="@+id/ivRecordarLlamar"
         android:layout_width="35dp"
         android:layout_height="35dp"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="15dp"
         android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="@+id/ivFavoritos"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/ivFavoritos"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@android:drawable/stat_sys_phone_call_forward" />
 
     <ImageView
         android:id="@+id/ivFavoritos"
         android:layout_width="35dp"
         android:layout_height="35dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginStart="15dp"
         android:visibility="invisible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/tvApellidos"
+        app:layout_constraintBottom_toBottomOf="@+id/ivRecordarLlamar"
+        app:layout_constraintStart_toEndOf="@+id/ivSexo"
+        app:layout_constraintTop_toTopOf="@+id/ivRecordarLlamar"
         app:srcCompat="@android:drawable/btn_star_big_on" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintGuide_percent="0.3"
-        app:layout_constraintTop_toBottomOf="@+id/tvNombreEmpresa" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline3"
@@ -124,59 +118,61 @@
         android:id="@+id/etTelefono"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="20dp"
         android:ems="10"
         android:hint="123456789"
         android:inputType="phone"
         android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/guideline4"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline2" />
+        app:layout_constraintTop_toTopOf="@+id/guideline3" />
 
     <RadioGroup
         android:id="@+id/rgTipoTelefono"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/guideline3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etTelefono">
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/etTelefono"
+        app:layout_constraintEnd_toStartOf="@+id/guideline5"
+        app:layout_constraintStart_toEndOf="@+id/etTelefono"
+        app:layout_constraintTop_toTopOf="@+id/etTelefono">
 
         <RadioButton
             android:id="@+id/rbParticular"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checked="true"
-            android:text="@string/rbParticular" />
+            android:text="@string/rbParticular"
+            android:visibility="visible" />
 
         <RadioButton
             android:id="@+id/rbEmpresa"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/rbEmpresa" />
+            android:text="@string/rbEmpresa"
+            android:visibility="visible" />
     </RadioGroup>
 
     <Switch
         android:id="@+id/swFavorito"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="15dp"
         android:checked="false"
         android:text="@string/swFavorito"
-        app:layout_constraintBottom_toTopOf="@+id/ckbRecordarLlamar"
-        app:layout_constraintEnd_toStartOf="@+id/rgSexo"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/guideline3" />
+        app:layout_constraintBottom_toTopOf="@+id/guideline4"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <RadioGroup
         android:id="@+id/rgSexo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
         android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintBottom_toBottomOf="@+id/swFavorito"
         app:layout_constraintStart_toEndOf="@+id/swFavorito"
         app:layout_constraintTop_toTopOf="@+id/swFavorito">
 
@@ -198,12 +194,10 @@
         android:id="@+id/ckbRecordarLlamar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:text="@string/chkRecordarLlamar"
-        app:layout_constraintBottom_toTopOf="@+id/guideline4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/swFavorito" />
+        tools:layout_editor_absoluteY="353dp" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline4"
@@ -211,48 +205,57 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintGuide_percent="0.65"
+        app:layout_constraintGuide_percent="0.8"
         app:layout_constraintTop_toBottomOf="@+id/ckbRecordarLlamar" />
 
     <TextView
         android:id="@+id/tvNumeroEdad"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginStart="15dp"
         android:text="@string/tvNumeroEdad"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline4" />
+        app:layout_constraintBottom_toBottomOf="@+id/ckbRecordarLlamar"
+        app:layout_constraintStart_toEndOf="@+id/ckbRecordarLlamar"
+        app:layout_constraintTop_toTopOf="@+id/ckbRecordarLlamar" />
 
     <SeekBar
         android:id="@+id/skbNumeroEdad"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
         android:max="100"
         android:progress="30"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvNumeroEdad" />
+        app:layout_constraintBottom_toBottomOf="@+id/ckbRecordarLlamar"
+        app:layout_constraintEnd_toStartOf="@+id/guideline5"
+        app:layout_constraintStart_toEndOf="@+id/tvNumeroEdad"
+        app:layout_constraintTop_toTopOf="@+id/ckbRecordarLlamar" />
 
     <Button
         android:id="@+id/btnOk"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:text="@string/btnOk"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnCancelar"
+        app:layout_constraintBottom_toTopOf="@+id/btnCancelar"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btnCancelar"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:text="@string/btnCancelar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/btnOk" />
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintTop_toBottomOf="@+id/btnOk" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.75" />
 
 </android.support.constraint.ConstraintLayout>

@@ -57,7 +57,10 @@ public class NuevoContactoActivity extends AppCompatActivity implements View.OnC
         ivFavoritos = findViewById(R.id.ivFavoritos);
         ivRecordarLlamar = findViewById(R.id.ivRecordarLlamar);
         tvNumeroEdad = findViewById(R.id.tvNumeroEdad);
+        tvNumeroEdad.setText("Edad : " + getResources().getInteger(R.integer.edadMaxima)/2);
         skbNumeroEdad = findViewById(R.id.skbNumeroEdad);
+        skbNumeroEdad.setMax(getResources().getInteger(R.integer.edadMaxima));
+        skbNumeroEdad.setProgress(getResources().getInteger(R.integer.edadMaxima)/2);
         btnOk = findViewById(R.id.btnOk);
         btnCancelar = findViewById(R.id.btnCancelar);
 
@@ -70,10 +73,10 @@ public class NuevoContactoActivity extends AppCompatActivity implements View.OnC
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
                 switch (i){
                     case R.id.rbParticular:
-                        //ivTipoTelefono.setImageResource();
+                        ivTipoTelefono.setImageResource(R.drawable.ic_particular);
                         break;
                     case R.id.rbEmpresa:
-                        //ivTipoTelefono.setImageResource();
+                        ivTipoTelefono.setImageResource(R.drawable.ic_empresa);
                         break;
                 }
             }
@@ -84,10 +87,10 @@ public class NuevoContactoActivity extends AppCompatActivity implements View.OnC
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
                 switch(i){
                     case R.id.rbMujer:
-                        //ivSexo.setImageResource();
+                        ivSexo.setImageResource(R.drawable.ic_mujer);
                         break;
                     case R.id.rbHombre:
-                        //ivSexo.setImageResource();
+                        ivSexo.setImageResource(R.drawable.ic_hombre);
                         break;
                 }
             }
